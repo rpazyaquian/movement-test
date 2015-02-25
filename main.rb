@@ -15,6 +15,15 @@ class GameWindow < Gosu::Window
 		@character_y = @window_center_y - (@character.height / 2)
 	end
 	def update
+		if button_down? Gosu::KbDown
+			@character_y += 1
+		elsif button_down? Gosu::KbUp
+			@character_y -= 1
+		elsif button_down? Gosu::KbLeft
+			@character_x -= 1
+		elsif button_down? Gosu::KbRight
+			@character_x += 1
+		end
 	end
 	def draw
 		@character.draw(@character_x, @character_y, 0)
