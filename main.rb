@@ -7,15 +7,16 @@ class GameWindow < Gosu::Window
 		@character = Gosu::Image.new(self, './assets/img/happy.gif')
 		@window_width = 640
 		@window_height = 480
-	end
-	def update
-	end
-	def draw
+
 		@window_center_x = 640/2
 		@window_center_y = 480/2
 
 		@character_x = @window_center_x - (@character.width / 2)
 		@character_y = @window_center_y - (@character.height / 2)
+	end
+	def update
+	end
+	def draw
 		@character.draw(@character_x, @character_y, 0)
 	end
 end
