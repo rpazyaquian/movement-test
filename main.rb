@@ -9,3 +9,6 @@ class GameWindow < Gosu::Window
 	def draw
 	end
 end
+
+window = GameWindow.new
+window.show
